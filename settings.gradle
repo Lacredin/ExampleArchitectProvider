@@ -14,3 +14,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ExampleArchitectProvider"
 include ':app'
+include ':esas:domain:installer'
+include ':esas:data:installer'
+include ':esas:model:installer'
+include ':esas:db'
+include ':esas:internet'
