@@ -12,15 +12,20 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/courier" />
+            <option value="$PROJECT_DIR$/courier/db" />
             <option value="$PROJECT_DIR$/esas" />
             <option value="$PROJECT_DIR$/esas/data" />
             <option value="$PROJECT_DIR$/esas/data/installer" />
+            <option value="$PROJECT_DIR$/esas/data/profile" />
             <option value="$PROJECT_DIR$/esas/db" />
             <option value="$PROJECT_DIR$/esas/domain" />
             <option value="$PROJECT_DIR$/esas/domain/installer" />
+            <option value="$PROJECT_DIR$/esas/domain/profile" />
             <option value="$PROJECT_DIR$/esas/internet" />
             <option value="$PROJECT_DIR$/esas/model" />
             <option value="$PROJECT_DIR$/esas/model/installer" />
+            <option value="$PROJECT_DIR$/esas/model/profile" />
           </set>
         </option>
       </GradleProjectSettings>
