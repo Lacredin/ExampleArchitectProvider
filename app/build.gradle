@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'io.realm.kotlin'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -54,4 +55,8 @@ dependencies {
     implementation project(path: ':esas:domain:installer')
     implementation project(path: ':esas:db')
     implementation project(path: ':esas:data:installer')
+    implementation project(path: ':core')
+
+    implementation 'com.google.dagger:dagger:2.44.2'
+    kapt 'com.google.dagger:dagger-compiler:2.44'
 }

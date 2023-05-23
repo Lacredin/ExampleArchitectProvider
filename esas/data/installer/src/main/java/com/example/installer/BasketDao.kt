@@ -1,17 +1,17 @@
 package com.example.installer
 
-import io.realm.kotlin.Realm
+import com.example.core.DataBase
 import io.realm.kotlin.query.RealmResults
+import javax.inject.Inject
 
-lateinit var realm: Realm
-
-class BasketDao(val db: Realm = realm) {
+class BasketDao @Inject constructor(val db: DataBase) {
 
     fun save(): RealmResults<WorkBasket> {
-        db.writeBlocking {
+        val realm = db.getBD()
+        realm.writeBlocking {
             copyToRealm(WorkBasket())
         }
 
-        return db.query(WorkBasket::class).find()
+        return realm.query(WorkBasket::class).find()
     }
 }

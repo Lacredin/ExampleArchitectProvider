@@ -1,7 +1,9 @@
 package com.example.installer
 
-class BasketUseCase(
-    val basketRepository: BasketRepository = BasketRepository()
+import javax.inject.Inject
+
+class BasketUseCase @Inject constructor(
+    val basketRepository: BasketRepository
 ) {
 
     fun test() = basketRepository.basketDao.save()

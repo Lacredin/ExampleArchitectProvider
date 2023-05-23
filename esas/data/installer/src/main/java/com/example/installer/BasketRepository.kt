@@ -1,6 +1,8 @@
 package com.example.installer
 
-class BasketRepository(val basketDao: BasketDao = BasketDao()) {
+import javax.inject.Inject
+
+class BasketRepository @Inject constructor(val basketDao: BasketDao) {
 
 
 }
