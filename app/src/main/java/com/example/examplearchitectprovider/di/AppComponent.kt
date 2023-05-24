@@ -3,25 +3,30 @@ package com.example.examplearchitectprovider.di
 import com.example.core.DataBase
 import com.example.db.InstallerDB
 import com.example.examplearchitectprovider.MainActivity
-import com.example.installer.di.InstallerComponent
-import com.example.installer.di.InstallerModule
 import dagger.Component
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
 
 @Component(
-    modules = [AppModule::class, InstallerModule::class, DataBaseModule::class],
-    // dependencies = [InstallerComponent::class]
+    modules = [AppModule::class, DataBaseModule::class, InstallerModule::class],
 )
 interface AppComponent {
 
-    fun installerComponentBuilder(): InstallerComponent.Builder
+    //fun installerComponentBuilder(): InstallerComponent.Builder
 
     fun inject(activity: MainActivity)
+
+//    @Component.Builder
+//    interface AppBuilder {
+//    @BindsInstance
+//        fun setContext(context: Context): Component.Builder
+//
+//        fun build(): AppComponent
+//    }
 }
 
-@Module
+@Module(subcomponents = [InstallerComponent::class])
 object AppModule {
 
 

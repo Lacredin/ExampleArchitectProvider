@@ -1,24 +1,26 @@
-package com.example.installer.di
+package com.example.examplearchitectprovider.di
 
 import com.example.core.DataBase
+import com.example.examplearchitectprovider.MainActivity
 import com.example.installer.BasketDao
 import com.example.installer.BasketRepository
+import dagger.Component
 import dagger.Module
 import dagger.Provides
-import dagger.Subcomponent
 import javax.inject.Named
 
 
-@Subcomponent(modules = [InstallerModule::class])
+@Component(modules = [InstallerModule::class, DataBaseModule::class])
 interface InstallerComponent {
 
+    fun inject(activity: MainActivity)
 
-    @Subcomponent.Builder
-    interface Builder {
-        fun installerModule(InstallerModule: InstallerModule): Builder
-
-        fun build(): InstallerComponent
-    }
+//    @Subcomponent.Builder
+//    interface Builder {
+//        fun installerModule(InstallerModule: InstallerModule): Builder
+//
+//        fun build(): InstallerComponent
+//    }
 }
 
 

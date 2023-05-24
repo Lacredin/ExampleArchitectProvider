@@ -10,8 +10,7 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     init {
-        DI.init(this)
-        DI.components.appComponent.inject(this)
+        DI.components.installerComponent.inject(this)
     }
 
     @Inject
