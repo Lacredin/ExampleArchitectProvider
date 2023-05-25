@@ -56,6 +56,8 @@ dependencies {
     implementation project(path: ':esas:db')
     implementation project(path: ':esas:data:installer')
     implementation project(path: ':core')
+    implementation project(path: ':esas:internet')
+    implementation project(path: ':esas:api')
 
     implementation 'com.google.dagger:dagger:2.44.2'
     kapt 'com.google.dagger:dagger-compiler:2.44'

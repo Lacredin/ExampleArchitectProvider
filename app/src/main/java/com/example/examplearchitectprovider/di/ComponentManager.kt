@@ -6,9 +6,7 @@ import android.content.Context
 class ComponentManager(private val context: Context) {
     val appComponent: AppComponent by lazy {
         DaggerAppComponent.builder()
-//            .dataBaseModule(DataBaseModule)
-//            .appModule(AppModule)
-//            .installerModule(InstallerModule)
+            .setContext(context)
             .build()
     }
 
@@ -20,9 +18,9 @@ class ComponentManager(private val context: Context) {
 
     val installerComponent: InstallerComponent by lazy {
         DaggerInstallerComponent.builder()
-//            .dataBaseModule(DataBaseModule)
-//            .appModule(AppModule)
-//            .installerModule(InstallerModule)
+            .setAppDeps(object : AppDeps {
+                override val context: Context = this@ComponentManager.context
+            })
             .build()
     }
 }

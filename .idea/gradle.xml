@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/courier" />
             <option value="$PROJECT_DIR$/courier/db" />
             <option value="$PROJECT_DIR$/esas" />
+            <option value="$PROJECT_DIR$/esas/api" />
             <option value="$PROJECT_DIR$/esas/data" />
             <option value="$PROJECT_DIR$/esas/data/installer" />
             <option value="$PROJECT_DIR$/esas/data/profile" />

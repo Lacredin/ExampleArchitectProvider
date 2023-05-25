@@ -1,32 +1,31 @@
 package com.example.examplearchitectprovider.di
 
+import android.content.Context
 import com.example.core.DataBase
 import com.example.db.InstallerDB
-import com.example.examplearchitectprovider.MainActivity
+import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
 
 @Component(
-    modules = [AppModule::class, DataBaseModule::class, InstallerModule::class],
+    modules = [AppModule::class, /*DataBaseModule::class, InstallerModule::class*/],
 )
 interface AppComponent {
 
-    //fun installerComponentBuilder(): InstallerComponent.Builder
+    //fun inject(activity: MainActivity)
 
-    fun inject(activity: MainActivity)
+    @Component.Builder
+    interface Builder {
+        @BindsInstance
+        fun setContext(context: Context): Builder
 
-//    @Component.Builder
-//    interface AppBuilder {
-//    @BindsInstance
-//        fun setContext(context: Context): Component.Builder
-//
-//        fun build(): AppComponent
-//    }
+        fun build(): AppComponent
+    }
 }
 
-@Module(subcomponents = [InstallerComponent::class])
+@Module(/*subcomponents = [InstallerComponent::class]*/)
 object AppModule {
 
 
