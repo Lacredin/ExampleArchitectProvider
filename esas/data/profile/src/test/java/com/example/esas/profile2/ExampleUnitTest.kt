@@ -1,4 +1,4 @@
-package com.example.profile
+package com.example.esas.profile2
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

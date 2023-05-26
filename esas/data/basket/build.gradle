@@ -44,7 +44,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
     implementation 'io.realm.kotlin:library-base:1.7.0'
 
-    implementation project(path: ':esas:model:installer')
+    implementation project(path: ':esas:model:basket')
     implementation project(path: ':esas:api')
     implementation project(path: ':core')
 

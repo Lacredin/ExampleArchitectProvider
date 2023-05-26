@@ -18,15 +18,15 @@
             <option value="$PROJECT_DIR$/esas" />
             <option value="$PROJECT_DIR$/esas/api" />
             <option value="$PROJECT_DIR$/esas/data" />
-            <option value="$PROJECT_DIR$/esas/data/installer" />
+            <option value="$PROJECT_DIR$/esas/data/basket" />
             <option value="$PROJECT_DIR$/esas/data/profile" />
             <option value="$PROJECT_DIR$/esas/db" />
             <option value="$PROJECT_DIR$/esas/domain" />
-            <option value="$PROJECT_DIR$/esas/domain/installer" />
+            <option value="$PROJECT_DIR$/esas/domain/basket" />
             <option value="$PROJECT_DIR$/esas/domain/profile" />
             <option value="$PROJECT_DIR$/esas/internet" />
             <option value="$PROJECT_DIR$/esas/model" />
-            <option value="$PROJECT_DIR$/esas/model/installer" />
+            <option value="$PROJECT_DIR$/esas/model/basket" />
             <option value="$PROJECT_DIR$/esas/model/profile" />
           </set>
         </option>

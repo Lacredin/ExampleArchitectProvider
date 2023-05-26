@@ -1,14 +1,13 @@
 package com.example.db
 
+import com.example.core.DataBase
 import com.example.installer.WorkBasket
 import io.realm.kotlin.Realm
 import io.realm.kotlin.RealmConfiguration
+import javax.inject.Inject
 
-class EsasDB {
+class EsasDB @Inject constructor(): DataBase {
+    val config = RealmConfiguration.create(schema = setOf(WorkBasket::class))
 
-    fun initRealm(): Realm {
-        val config = RealmConfiguration.create(schema = setOf(WorkBasket::class))
-        val realm: Realm = Realm.open(config)
-        return realm
-    }
+    override fun getBD() = Realm.open(config)
 }
